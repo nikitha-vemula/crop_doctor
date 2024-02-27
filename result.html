@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictions</title>
+    <style>
+        h1{
+            margin-left: 670px;
+            font-size: 38px;
+            color: green;
+        }
+        body{
+            background-image: url("https://i.pinimg.com/originals/b9/ed/a4/b9eda4c22e857e0b8f73d7f21e9d3d6c.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-size: 25px;
+        }
+        
+        .row{
+            display: flex;
+        }
+        .column1{
+            flex-basis: 60%;
+        }
+        .column2{
+            flex-basis: 40%;
+            margin-left: 150px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+        .column3{
+            flex-basis: 20%;
+        }
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .img{
+            /* border-radius: 300px; */
+            margin-left: 150px;
+            width: 500px;
+            height: 500px;
+        }
+
+    </style>
+</head>
+<h1></h1>
+<body>
+    <div class="row">
+        <div class="column1"><img src="{{ url_for('static', filename=img )}}" class="img"></div>
+        <div class="column2" style="margin-top: 10px;">{{res}}</div>
+        <div class="column3"></div>
+    </div>
+</body>
+</html>
